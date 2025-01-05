@@ -1,0 +1,204 @@
+body {
+    background-image: url(/assets/background-img.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    cursor: url('/assets/basic/cursor.png'),auto;
+}
+
+html {
+    scroll-behavior: smooth;
+    cursor: url('/assets/basic/cursor.png'),auto;
+}
+
+a {
+    text-decoration: none;
+    cursor: url('/assets/basic/cursor.png'),auto;
+}
+
+.top-header {
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.6);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* 垂直居中整个导航栏 */
+    justify-content: center; /* 水平居中整个导航栏 */
+    padding: 0 20px; /* 添加一些内边距以确保内容不会紧贴边缘 */
+}
+
+.top-nav {
+    display: flex;
+    align-items: center; /* 垂直居中所有子元素 */
+    justify-content: center; /* 水平居中所有子元素 */
+    width: 100%;
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 水平居中列表项 */
+}
+
+.top-nav img {
+    width: 72px;
+    margin-right: 20px; /* 为 logo 添加一些右边距 */
+}
+
+.top-nav li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center; /* 确保 li 内的元素也垂直居中 */
+}
+
+.top-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.top-nav li input {
+    display: block;
+    width: auto;
+    border: 0px #00000000; 
+    outline: none; 
+    background-color: transparent; 
+    color: white; 
+    padding: 10px; 
+    font-size: 16px; 
+    background-color: #00000040;
+    border-radius: 9999px;
+    transition: 0.2s;
+    cursor: url('/assets/basic/cursor.png'),auto;
+}
+
+.top-nav li input:hover {
+    background-color: #00000050;
+    border: #00000040 5px solid;
+    color: rgb(255, 255, 255);
+}
+
+.top-nav li input:focus {
+    background-color: #00000050;
+    border: #ffffff40 2px solid;
+    color: rgb(255, 255, 255);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: 60px; /* 为导航栏留出空间 */
+}
+
+#main h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.links-bg {
+    background-color: rgba(57, 59, 64, 0.6);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.container-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container-title p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.links-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 4px 0;
+    box-sizing: border-box;
+}
+
+.link {
+    background-color: rgba(38, 39, 43, 0.3);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.link:hover {
+    transform: scale(1.05);
+}
+
+.link img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+    border-radius: 16px;
+}
+
+.link-text h4 {
+    margin: 0;
+    color: white;
+}
+
+.link-text p {
+    margin: 5px 0 0;
+    color: #ddd;
+    font-size: 1rem;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
