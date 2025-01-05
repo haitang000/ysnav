@@ -11,6 +11,11 @@ searchInput.addEventListener('keydown', function(event) {
         const searchText = searchInput.value;
 
         // 弹出弹窗，显示输入的文本
-        alert('喜报 搜索功能还没做完！');
+        if (searchText==='') {
+            alert('不是哥们，你这啥也没有我怎么给你找');
+        }
+        else {
+            alert('喜报 搜索功能还没做完！');
+        }
     }
 });
