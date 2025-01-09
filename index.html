@@ -13,10 +13,11 @@
         <nav class="top-nav">
             <ul>
                 <img src="assets/basic/logo.png" alt="原神">
-                <li><a href="#main">首页</a></li>
-                <li><a href="#launch">基本信息</a></li>
-                <li><a href="#guide">攻略</a></li>
-                <li><a href="#contact">联系我们</a></li>
+                
+                <li><a href="#main" class="nav-link">首页</a></li>
+                <li><a href="#launch" class="nav-link">基本信息</a></li>
+                <li><a href="#guide" class="nav-link">攻略</a></li>
+                <li><a href="#contact" class="nav-link">联系我们</a></li>
                 <li>
                     <form>
                         <input type="text" placeholder="今天想搜点什么？" id="search-input">
@@ -38,6 +39,7 @@
                 <p>最基础的一集</p>
             </div>
             <div class="links-container">
+                <div id="no-results-message" style="display: none;">没有找到对应的内容</div>
                 <a href="https://ys.mihoyo.com/" class="link" target="_blank">
                     <img src="assets/icons/links/yslogo.png" alt="原神官网">
                     <div class="link-text">
@@ -59,6 +61,13 @@
                         <p>不用下载，随时随地原神启动！</p>
                     </div>
                 </a>
+                <a href="https://ys.mihoyo.com/cloud/?utm_source=default#/download" class="link" target="_blank">
+                    <img src="assets/icons/links/cloudys.png" alt="网页版云原神">
+                    <div class="link-text">
+                        <h4>下载云原神客户端</h4>
+                        <p>超小体积，随时随地原神启动！</p>
+                    </div>
+                </a>
                 <a href="https://www.miyoushe.com/ys/" class="link" target="_blank">
                     <img src="assets/icons/links/miyoushe.png" alt="米游社原神板块">
                     <div class="link-text">
@@ -75,6 +84,7 @@
                 <p>攻略合集</p>
             </div>
             <div class="links-container">
+                <div id="no-results-message" style="display: none;">没有找到对应的内容</div>
                 <a href="https://www.miyoushe.com/ys/home/43?type=hot" class="link" target="_blank">
                     <img src="assets/icons/links/miyoushe.png" alt="米游社">
                     <div class="link-text">
@@ -132,6 +142,9 @@
         <p>© 2024-2025 原神导航</p>
     </footer>
 
-    <script src="js/search.js"></script>
+
 </body>
 </html>
+
+<script src="js/search.js"></script>
+<script src="js/nav.js"></script>

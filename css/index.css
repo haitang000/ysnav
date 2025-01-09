@@ -41,17 +41,17 @@ a {
     width: 100%;
 }
 
+.top-nav img {
+    width: 72px;
+    margin-right: 20px; /* 为 logo 添加一些右边距 */
+}
+
 .top-nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center; /* 水平居中列表项 */
-}
-
-.top-nav img {
-    width: 72px;
-    margin-right: 20px; /* 为 logo 添加一些右边距 */
 }
 
 .top-nav li {
@@ -67,7 +67,30 @@ a {
     padding: 14px 16px;
     font-weight: bolder;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    position: relative; /* 设置相对定位 */
+    transition: color 0.3s;
+}
+
+.top-nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%; /* 初始位置在中间 */
+    width: 0; /* 初始宽度为0 */
+    height: 2px; /* 初始高度为2px */
+    background-color: #FFBA4A;
+    transform: translateX(-50%); /* 使长方形居中 */
+    transform-origin: center; /* 从中间扩展 */
+    transition: width 0.3s, height 0.3s;
+}
+
+.top-nav li a:hover::after {
+    width: 100%; /* 鼠标悬停时宽度扩展到100% */
+}
+
+/* 当滚动到对应 section 时，增加高度 */
+.active-link::after {
+    height: 4px; /* 增加高度为4px */
 }
 
 .top-nav li input {
@@ -116,7 +139,7 @@ a {
 
 .btn {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #FFBA4A;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -125,7 +148,7 @@ a {
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #f7ad37;
 }
 
 .links-bg {
@@ -136,14 +159,16 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px 20px;
     box-sizing: border-box;
+    transition: 0.3s;
 }
 
 .container-title {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    transition: 0.3s;
 }
 
 .container-title p {
@@ -161,6 +186,7 @@ a {
     gap: 20px;
     padding: 4px 0;
     box-sizing: border-box;
+    transition: 0.3s;
 }
 
 .link {
@@ -192,6 +218,10 @@ a {
     margin: 5px 0 0;
     color: #ddd;
     font-size: 1rem;
+}
+
+.no-results-message {
+    color: #ffffff80;
 }
 
 footer {
