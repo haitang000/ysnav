@@ -2,6 +2,12 @@ document.getElementById('search-input').addEventListener('input', function () {
     search();
 });
 
+document.getElementById('search-input').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // 阻止 Enter 键的默认行为
+    }
+});
+
 const search = () => {
     const searchInput = document.getElementById('search-input').value.trim().toLowerCase(); // 获取输入框的值并去除前后空格
     console.log('Search input:', searchInput); // 调试输出
@@ -32,7 +38,7 @@ const search = () => {
     const noResultsMessage = document.getElementById('no-results-message');
     if (matchCount === 0) {
         noResultsMessage.style.display = 'block'; // 显示“没有找到对应的内容”
-        noResultsMessage.style.color = '#ffffff80';
+        noResultsMessage.style.color = '#FFFFFF80'; // 设置颜色为 #FFFFFF80
     } else {
         noResultsMessage.style.display = 'none'; // 隐藏“没有找到对应的内容”
     }
