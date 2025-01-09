@@ -20,6 +20,13 @@ html {
     scrollbar-width: none;
 }
 
+i {
+    font-size: 0.8rem;
+    margin-right: 4px;
+    color: #ffffff80;
+    transition: 0.3s;
+}
+
 a {
     text-decoration: none;
     cursor: url('/assets/basic/cursor.png'),auto;
@@ -92,6 +99,10 @@ a {
     width: 100%; /* 鼠标悬停时宽度扩展到100% */
 }
 
+.top-nav li a:hover i {
+    color: #ffffff;
+}
+
 .top-nav li a:hover {
     scale: 1.2;
     color: #Ffffff;
@@ -109,7 +120,8 @@ a {
     border: 0px #00000000; 
     outline: none; 
     background-color: transparent; 
-    color: white; 
+    color: #ffffff;
+    opacity: 0.5; 
     padding: 10px; 
     font-size: 16px; 
     background-color: #00000040;
@@ -155,6 +167,11 @@ a {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+}
+
+.btn i {
+    margin-left: 4px;
+    font-size: 1rem;
 }
 
 .btn:hover {
@@ -244,11 +261,18 @@ footer {
 }
 
 .footer-links {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 footer p {
     margin: 0;
+}
+
+footer #sitetime-container {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
 }
 
 footer #sitetime {
