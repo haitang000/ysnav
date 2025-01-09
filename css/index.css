@@ -62,7 +62,7 @@ a {
 
 .top-nav li a {
     display: block;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 14px 16px;
     font-weight: 100;
@@ -74,7 +74,7 @@ a {
 .top-nav li a::after {
     content: '';
     position: absolute;
-    bottom: 3px;
+    bottom: 4px;
     left: 50%; /* 初始位置在中间 */
     width: 0; /* 初始宽度为0 */
     height: 2px; /* 初始高度为2px */
@@ -91,7 +91,7 @@ a {
 .top-nav li a:hover {
     scale: 1.2;
     color: #Ffffff;
-    font-weight: 999;
+    font-weight: 600;
 }
 
 /* 当滚动到对应 section 时，增加高度 */
