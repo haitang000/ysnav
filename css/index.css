@@ -235,6 +235,29 @@ footer {
     background-color: rgba(51, 51, 51, 0.8);
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 16px 0;
     box-sizing: border-box;
+}
+
+.footer-links {
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer #sitetime {
+    color: #ffffff60;
+    font-size: smaller;
+}
+
+footer a {
+    color: #ffffff80;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 4px #ffffff;
 }
