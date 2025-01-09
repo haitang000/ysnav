@@ -1,21 +1,24 @@
-const searchInput = document.getElementById('search-input');
-
-// 监听输入框的 keydown 事件
-searchInput.addEventListener('keydown', function(event) {
-    // 检测是否按下 Enter 键（keyCode 为 13）
-    if (event.keyCode === 13) {
-        // 阻止默认的 Enter 键行为（如提交表单）
-        event.preventDefault();
-
-        // 获取输入框中的文本
-        const searchText = searchInput.value;
-
-        // 弹出弹窗，显示输入的文本
-        if (searchText==='') {
-            alert('不是哥们，你这啥也没有我怎么给你找');
-        }
-        else {
-            alert('喜报 搜索功能还没做完！');
-        }
+document.getElementById('search-input').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        search();
     }
 });
+
+const search = () => {
+    const searchInput = document.getElementById('search-input').value.toUpperCase();
+    const links = document.querySelectorAll('.link'); // 获取所有链接元素
+    const itemNames = document.querySelectorAll('.link h4'); // 获取所有链接中的 h4 元素
+
+    links.forEach((link, index) => {
+        const itemName = itemNames[index];
+        const textValue = itemName.textContent || itemName.innerHTML;
+
+        if (searchInput === '') {
+            link.style.display = ''; // 如果输入为空，显示所有链接
+        } else if (textValue.toUpperCase().includes(searchInput)) {
+            link.style.display = ''; // 显示匹配的链接
+        } else {
+            link.style.display = 'none'; // 隐藏不匹配的链接
+        }
+    });
+} 
