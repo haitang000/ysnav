@@ -18,7 +18,7 @@ function siteTime(){
     var todaySecond = today.getSeconds();
 
     // 定义一个时间点，这里以2024年8月15日13时19分17秒为例
-    var t1 = Date.UTC(2025,01,5,13,19,17);
+    var t1 = Date.UTC(2025,0o1,5,13,19,17);
     // 获取当前时间的时间戳
     var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
     // 计算两个时间点之间的差值
