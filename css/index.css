@@ -27,6 +27,10 @@ i {
     transition: 0.3s;
 }
 
+#warning {
+    color: #FFBA4A;
+}
+
 a {
     text-decoration: none;
     cursor: url('/assets/basic/cursor.png'),auto;
